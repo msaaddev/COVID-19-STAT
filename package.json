@@ -1,7 +1,13 @@
 {
-  "name": "COVID-19 Stats",
+  "name": "COVID-19 STATS",
+  "description": "A web app to keep track of COVID 19 around the world",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Muhammad Saad",
+    "email": "me@msaad.dev",
+    "url": "https://msaad.dev"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -30,5 +36,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "license": "MIT"
 }
