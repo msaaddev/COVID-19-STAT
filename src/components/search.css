@@ -1,0 +1,31 @@
+.search-area {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.search-btn {
+  color: #fad000;
+  background-color: #2d2b55;
+  border-radius: 10px;
+  padding: 5px 30px 5px 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.search-btn:hover {
+  background-color: #222244;
+  color: #ffffff
+}
+
+.search-area input {
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #2d2b55;
+  color: #fad000;
+  text-indent: 20px;
+  font-family: "Roboto", sans-serif;
+}
