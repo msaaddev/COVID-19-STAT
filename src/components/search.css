@@ -12,11 +12,15 @@
   transition: all 0.5s;
   cursor: pointer;
   font-weight: 600;
+  border: 1px solid rgba(250, 208, 0, 1);
+  font-size: 14px;
 }
 
 .search-btn:hover {
   background-color: #222244;
-  color: #ffffff
+  color: #ffffff;
+  box-shadow: 0 0 5px rgba(250, 208, 0, 1);
+  border: 1px solid rgba(250, 208, 0, 1);
 }
 
 .search-area input {
@@ -28,4 +32,12 @@
   color: #fad000;
   text-indent: 20px;
   font-family: "Roboto", sans-serif;
+  transition: all 0.5s;
+  font-size: 14px;
+  border: 1px solid rgba(250, 208, 0, 1);
+}
+
+.search-area input:focus {
+  box-shadow: 0 0 7px rgba(250, 208, 0, 1);
+  border: 2px solid rgba(250, 208, 0, 1);
 }
