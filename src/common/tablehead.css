@@ -1,0 +1,30 @@
+th {
+  padding: 10px 20px 10px 20px;
+  border: 1px solid #fad000;
+}
+/*
+.country {
+  width: 100px;
+} */
+
+.country,
+.active {
+  color: #fad000;
+}
+
+.cases,
+.recovered,
+.case_per_million {
+  color: green;
+}
+
+.cases_today,
+.critical {
+  color: indianred;
+}
+
+.deaths,
+.today_death,
+.death_per_million {
+  color: red;
+}
