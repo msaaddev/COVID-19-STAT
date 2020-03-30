@@ -1,11 +1,8 @@
 th {
   padding: 10px 20px 10px 20px;
   border: 1px solid #fad000;
+  background-color: #2d2b55;
 }
-/*
-.country {
-  width: 100px;
-} */
 
 .country,
 .active {
