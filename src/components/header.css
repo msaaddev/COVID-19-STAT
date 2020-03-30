@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   font-family: "Roboto Slab", serif;
-  border: solid;
+  background-color: #2d2b55;
+  border-bottom: solid;
+  border-color: #fad000;
+  border-radius: 0px 0px 20px 20px;
   margin: 0;
   overflow: hidden;
-  border-radius: 0px 0px 20px 20px;
-  border-color: #2d2b55;
   color: #fad000;
-  background-color: #2d2b55;
 }
 
 img {

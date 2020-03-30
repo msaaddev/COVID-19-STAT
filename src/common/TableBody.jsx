@@ -9,7 +9,6 @@ class TableBody extends Component {
     const { apiData } = this.props;
     return (
       <tbody>
-        {console.log(apiData)}
         {apiData.map(data => {
           return (
             <tr key={this.createKey(apiData, data)}>
