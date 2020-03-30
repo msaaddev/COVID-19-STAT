@@ -1,3 +1,13 @@
 {
-  "placeHolder": "Enter Any Country..."
+  "placeHolder": "Enter any country...",
+  "Country": "Country",
+  "Cases": "Cases",
+  "Cases_Today": "Cases Today",
+  "Deaths": "Deaths",
+  "Today_Deaths": "Deaths Today",
+  "Recovered": "Recovered",
+  "Active": "Active",
+  "Critical": "Critical",
+  "Cases_Per_Million": "Case Per Million",
+  "Deaths_Per_Million": "Deaths Per Million"
 }
