@@ -27,7 +27,11 @@ class Data extends Component {
       <div className="overflow">
         <table align="center">
           <TableHeader />
-          <TableBody apiData={this.state.apiData} />
+          {this.props.apiData === "" ? (
+            <TableBody data="" check="false" apiData={this.state.apiData} />
+          ) : (
+            <TableBody check="true" data={this.props.apiData} />
+          )}
         </table>
       </div>
     );
