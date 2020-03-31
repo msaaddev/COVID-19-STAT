@@ -4,6 +4,10 @@
   margin: 30px;
 }
 
+.textSearch {
+  width: 80%;
+}
+
 .search-btn {
   color: #fad000;
   background-color: #2d2b55;
@@ -13,6 +17,7 @@
   cursor: pointer;
   font-weight: 600;
   border: 1px solid rgba(250, 208, 0, 1);
+  flex: 2;
   font-size: 14px;
 }
 
@@ -35,6 +40,7 @@
   transition: all 0.5s;
   font-size: 14px;
   border: 1px solid rgba(250, 208, 0, 1);
+  flex: 3;
 }
 
 .search-area input:focus {

@@ -20,7 +20,20 @@ class Search extends Component {
     const { placeHolder } = this.props;
     return (
       <div className="search-area">
-        <input id="search" type="text" placeholder={placeHolder} />
+        <Link to="/search" className="textSearch">
+          <input
+            id="search"
+            type="text"
+            placeholder={placeHolder}
+            onKeyUp={e => {
+              if (e.keyCode === 13) {
+                this.searchCountry(e.target.value);
+                console.log(e.target.value);
+                console.log(e.keyCode);
+              }
+            }}
+          />
+        </Link>
         <Link to="/search">
           <button
             className="search-btn"
