@@ -22,7 +22,10 @@ class App extends Component {
 
   afterSearch = () => {
     this.setState({ check: true });
-    console.log(this.state.check);
+  };
+
+  resetCheck = () => {
+    this.setState({ check: false });
   };
 
   render() {
@@ -36,23 +39,30 @@ class App extends Component {
           afterSearch={this.afterSearch}
         />
 
-        {this.state.country === "" ? (
-          <Switch>
-            <Route
-              exact
-              path="/"
-              render={() => (
-                <Data check={this.state.check} apiData="" state={this.state} />
-              )}
-            />
-          </Switch>
-        ) : (
-          <Data
-            check={this.state.check}
-            apiData={this.state.country}
-            state={this.state}
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Data
+                reset={this.resetCheck}
+                check={this.state.check}
+                apiData=""
+              />
+            )}
           />
-        )}
+          <Route
+            exact
+            path="/search"
+            render={() => (
+              <Data
+                reset={this.resetCheck}
+                check={this.state.check}
+                apiData={this.state.country}
+              />
+            )}
+          />
+        </Switch>
       </React.Fragment>
     );
   }
