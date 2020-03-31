@@ -25,13 +25,9 @@ class Search extends Component {
             id="search"
             type="text"
             placeholder={placeHolder}
-            onKeyUp={e => {
-              if (e.keyCode === 13) {
-                this.searchCountry(e.target.value);
-                console.log(e.target.value);
-                console.log(e.keyCode);
-              }
-            }}
+            onChange={() =>
+              this.searchCountry(document.getElementById("search").value)
+            }
           />
         </Link>
         <Link to="/search">
