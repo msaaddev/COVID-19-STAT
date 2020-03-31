@@ -10,7 +10,7 @@
 
 .search-btn {
   color: #fad000;
-  background-color: #2d2b55;
+  background-color: #202124;
   border-radius: 10px;
   padding: 7px 30px 8px 30px;
   transition: all 0.5s;
@@ -22,7 +22,7 @@
 }
 
 .search-btn:hover {
-  background-color: #222244;
+  background-color: #202124;
   color: #ffffff;
   box-shadow: 0 0 5px rgba(250, 208, 0, 1);
   border: 1px solid rgba(250, 208, 0, 1);
@@ -33,7 +33,7 @@
   height: 30px;
   border-radius: 5px;
   margin-right: 10px;
-  background-color: #2d2b55;
+  background-color: #202124;
   color: #fad000;
   text-indent: 20px;
   font-family: "Roboto", sans-serif;
