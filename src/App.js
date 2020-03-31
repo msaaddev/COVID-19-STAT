@@ -24,10 +24,6 @@ class App extends Component {
     this.setState({ check: true });
   };
 
-  resetCheck = () => {
-    this.setState({ check: false });
-  };
-
   render() {
     return (
       <React.Fragment>
@@ -45,7 +41,6 @@ class App extends Component {
             path="/"
             render={() => (
               <Data
-                reset={this.resetCheck}
                 check={this.state.check}
                 apiData=""
               />
@@ -56,7 +51,6 @@ class App extends Component {
             path="/search"
             render={() => (
               <Data
-                reset={this.resetCheck}
                 check={this.state.check}
                 apiData={this.state.country}
               />
