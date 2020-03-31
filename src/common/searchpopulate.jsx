@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 
 class SearchPopulate extends Component {
+
   render() {
     const { data } = this.props;
-    console.log("Search Populate");
-
     return (
       <tbody>
         <tr key="1">

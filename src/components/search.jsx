@@ -10,6 +10,7 @@ class Search extends Component {
         `https://corona.lmao.ninja/countries/${value}`
       );
       this.props.onSearch(response.data);
+      this.props.afterSearch();
     } catch (error) {
       console.log(error);
     }

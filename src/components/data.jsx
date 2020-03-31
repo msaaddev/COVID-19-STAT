@@ -12,13 +12,15 @@ class Data extends Component {
     };
   }
   componentWillMount = async () => {
-    try {
-      const response = await axios.get(`https://corona.lmao.ninja/countries`);
-      response.data.sort((a, b) => parseFloat(a.cases) - parseFloat(b.cases));
-      response.data.reverse();
-      this.setState({ apiData: response.data });
-    } catch (error) {
-      console.log(error);
+    if (!this.props.check) {
+      try {
+        const response = await axios.get(`https://corona.lmao.ninja/countries`);
+        response.data.sort((a, b) => parseFloat(a.cases) - parseFloat(b.cases));
+        response.data.reverse();
+        this.setState({ apiData: response.data });
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 

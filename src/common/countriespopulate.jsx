@@ -5,7 +5,6 @@ class CountriesPopulate extends Component {
     return apiInfo.indexOf(data);
   };
   render() {
-    console.log("API DATA: ");
 
     return (
       <tbody>
