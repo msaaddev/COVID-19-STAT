@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./search.css";
+import { Link } from "react-router-dom";
 
 class Search extends Component {
   searchCountry = async value => {
@@ -19,14 +20,16 @@ class Search extends Component {
     return (
       <div className="search-area">
         <input id="search" type="text" placeholder={placeHolder} />
-        <button
-          className="search-btn"
-          onClick={() =>
-            this.searchCountry(document.getElementById("search").value)
-          }
-        >
-          Search
-        </button>
+        <Link to="/search">
+          <button
+            className="search-btn"
+            onClick={() =>
+              this.searchCountry(document.getElementById("search").value)
+            }
+          >
+            Search
+          </button>
+        </Link>
       </div>
     );
   }

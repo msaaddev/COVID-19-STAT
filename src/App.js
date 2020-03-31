@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 import pkg from "../package.json";
 import webAppdata from "./utils/webappdata.json";
 import Header from "./components/Header";
@@ -16,7 +17,7 @@ class App extends Component {
 
   onSearch = country => {
     this.setState({ country });
-    // console.log(this.state.country);
+    console.log(country);
   };
 
   render() {
@@ -28,6 +29,9 @@ class App extends Component {
           placeHolder={webAppdata.placeHolder}
           onSearch={this.onSearch}
         />
+        <Switch>
+          <Route exact path="/" render={() => <Data apiData="" />} />
+        </Switch>
         {this.state.country === "" ? (
           <Data apiData="" />
         ) : (
