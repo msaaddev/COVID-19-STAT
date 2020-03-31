@@ -11,13 +11,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      country: ""
+      country: "",
+      check: false
     };
   }
 
   onSearch = country => {
     this.setState({ country });
-    console.log(country);
+  };
+
+  afterSearch = () => {
+    this.setState({ check: true });
+    console.log(this.state.check);
   };
 
   render() {
@@ -28,14 +33,25 @@ class App extends Component {
           country={this.state.country}
           placeHolder={webAppdata.placeHolder}
           onSearch={this.onSearch}
+          afterSearch={this.afterSearch}
         />
-        <Switch>
-          <Route exact path="/" render={() => <Data apiData="" />} />
-        </Switch>
+
         {this.state.country === "" ? (
-          <Data apiData="" />
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Data check={this.state.check} apiData="" state={this.state} />
+              )}
+            />
+          </Switch>
         ) : (
-          <Data apiData={this.state.country} />
+          <Data
+            check={this.state.check}
+            apiData={this.state.country}
+            state={this.state}
+          />
         )}
       </React.Fragment>
     );
