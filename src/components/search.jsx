@@ -25,9 +25,7 @@ class Search extends Component {
             id="search"
             type="text"
             placeholder={placeHolder}
-            onChange={() =>
-              this.searchCountry(document.getElementById("search").value)
-            }
+            onChange={e => this.searchCountry(e.target.value)}
           />
         </Link>
         <Link to="/search">
