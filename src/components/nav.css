@@ -5,11 +5,6 @@
   margin-bottom: 10px;
 }
 
-/* .statsContainer,
-.growthContainer {
-  flex: 1;
-  display: flex;
-} */
 
 .statsContainer {
   transform: rotate(90deg);
@@ -17,7 +12,7 @@
 
 .statsContainer button {
   border-radius: 10px;
-  padding: 10px 18px 70px 19px;
+  padding: 30px 18px 70px 19px;
 }
 
 .growthContainer {
@@ -27,11 +22,10 @@
 
 .growthContainer button {
   border-radius: 10px;
-  padding: 10px 10px 70px 10px;
+  padding: 30px 10px 70px 10px;
 }
 
 .nav button {
-  /* padding: 7px 210px 12px 210px; */
   color: #fad000;
   background-color: black;
   border: none;

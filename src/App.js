@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 import pkg from "../package.json";
 import webAppdata from "./utils/webappdata.json";
 import Header from "./components/Header";
-import Search from "./components/search";
 import Data from "./components/data";
 import Nav from "./components/nav";
 import "./App.css";
@@ -29,13 +28,12 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header title={pkg.appName} />
-        <Search
+        <Nav
           country={this.state.country}
           placeHolder={webAppdata.placeHolder}
           onSearch={this.onSearch}
           afterSearch={this.afterSearch}
         />
-        <Nav />
         <Switch>
           <Route
             exact
