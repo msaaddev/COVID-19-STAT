@@ -1,0 +1,37 @@
+.nav {
+  display: flex;
+  overflow: hidden;
+}
+
+.statsContainer,
+.growthContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 7px 210px 12px 210px;
+  color: #fad000;
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid #fad000;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-left: 1px solid #fad000;
+  border-right: 1px solid #fad000;
+  border-radius: 0px 0px 20px 20px;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background-color: #202124;
+}
+
+@media screen and (max-width: 600px) {
+  button {
+    padding: 10px 0px 10px 0px;
+  }
+}

@@ -5,6 +5,7 @@ import webAppdata from "./utils/webappdata.json";
 import Header from "./components/Header";
 import Search from "./components/search";
 import Data from "./components/data";
+import Nav from "./components/nav";
 import "./App.css";
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header title={pkg.appName} />
+        <Nav />
         <Search
           country={this.state.country}
           placeHolder={webAppdata.placeHolder}
@@ -39,21 +41,13 @@ class App extends Component {
           <Route
             exact
             path="/"
-            render={() => (
-              <Data
-                check={this.state.check}
-                apiData=""
-              />
-            )}
+            render={() => <Data check={this.state.check} apiData="" />}
           />
           <Route
             exact
             path="/search"
             render={() => (
-              <Data
-                check={this.state.check}
-                apiData={this.state.country}
-              />
+              <Data check={this.state.check} apiData={this.state.country} />
             )}
           />
         </Switch>
