@@ -29,14 +29,13 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header title={pkg.appName} />
-        <Nav />
         <Search
           country={this.state.country}
           placeHolder={webAppdata.placeHolder}
           onSearch={this.onSearch}
           afterSearch={this.afterSearch}
         />
-
+        <Nav />
         <Switch>
           <Route
             exact

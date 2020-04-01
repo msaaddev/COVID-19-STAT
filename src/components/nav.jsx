@@ -7,7 +7,7 @@ class Nav extends Component {
   render() {
     return (
       <div className="nav">
-        <div className="statsContainer">
+          <div className="statsContainer">
           <Link to="/">
             <button className="stats">STATS</button>
           </Link>

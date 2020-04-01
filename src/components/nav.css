@@ -1,28 +1,47 @@
 .nav {
   display: flex;
   overflow: hidden;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.statsContainer,
+/* .statsContainer,
 .growthContainer {
   flex: 1;
   display: flex;
-  justify-content: center;
+} */
+
+.statsContainer {
+  transform: rotate(90deg);
 }
 
-button {
-  padding: 7px 210px 12px 210px;
+.statsContainer button {
+  border-radius: 10px;
+  padding: 10px 18px 70px 19px;
+}
+
+.growthContainer {
+  transform: rotate(270deg);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.growthContainer button {
+  border-radius: 10px;
+  padding: 10px 10px 70px 10px;
+}
+
+.nav button {
+  /* padding: 7px 210px 12px 210px; */
   color: #fad000;
   background-color: black;
   border: none;
-  border-bottom: 1px solid #fad000;
+  border-left: 1px solid #fad000;
+  border-right: 1px solid #fad000;
+  border-top: 1px solid #fad000;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  border-left: 1px solid #fad000;
-  border-right: 1px solid #fad000;
-  border-radius: 0px 0px 20px 20px;
   transition: all 0.5s;
 }
 
@@ -31,7 +50,16 @@ button:hover {
 }
 
 @media screen and (max-width: 600px) {
-  button {
-    padding: 10px 0px 10px 0px;
+  .statsContainer button {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px 18px 70px 19px;
+  }
+
+  .growthContainer button {
+    margin-top: 10px;
+
+    border-radius: 10px;
+    padding: 10px 10px 70px 10px;
   }
 }
