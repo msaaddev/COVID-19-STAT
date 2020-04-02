@@ -5,7 +5,7 @@ import "./growth.css";
 const GrowthChart = ({ data, title, color }) => {
   return (
     <React.Fragment>
-      <h3 class="growth">{title}</h3>
+      <h3 className="growth">{title}</h3>
       <div className="worldwide">
         <ResponsiveLine
           data={data}
