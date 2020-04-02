@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./tablebody.css";
+ 
 class SearchPopulate extends Component {
   render() {
     const { data } = this.props;

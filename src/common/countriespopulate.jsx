@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./tablebody.css";
 
 class CountriesPopulate extends Component {
   createKey = (apiInfo, data) => {
     return apiInfo.indexOf(data);
   };
   render() {
-
     return (
       <tbody>
         {this.props.apiInfo.map(data => {
@@ -34,6 +35,7 @@ class CountriesPopulate extends Component {
                   ? 0
                   : data.deathsPerOneMillion}
               </td>
+              <td className="active">-</td>
             </tr>
           );
         })}

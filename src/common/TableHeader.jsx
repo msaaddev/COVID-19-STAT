@@ -21,7 +21,7 @@ const TableHeader = () => {
         <th className="critical">{webAppdata.Critical}</th>
         <th className="case_per_million">{webAppdata.Cases_Per_Million}</th>
         <th className="death_per_million">{webAppdata.Deaths_Per_Million}</th>
-        {check && <th className="active">{webAppdata.Growth}</th>}
+        <th className="active">{webAppdata.Growth}</th>
       </tr>
     </thead>
   );

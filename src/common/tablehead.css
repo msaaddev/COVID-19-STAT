@@ -9,13 +9,20 @@ th {
 .active {
   color: #fad000;
   text-align: left;
+  padding: 10px 15px 10px 15px;
 }
 
 .active a {
   color: #fad000;
-  padding-bottom: 15px;
-  text-decoration-color:  indianred;
-  text-decoration-thickness: 4px;
+  padding-bottom: 1px;
+  text-decoration: none;
+  border-bottom: solid 3px indianred;
+  text-align: left;
+  transition: all 0.5s;
+}
+
+.active a:hover {
+  border-bottom: solid 3px green;
 }
 
 .cases,
@@ -23,12 +30,14 @@ th {
 .case_per_million {
   color: green;
   text-align: left;
+  padding: 10px 15px 10px 15px;
 }
 
 .cases_today,
 .critical {
   color: indianred;
   text-align: left;
+  padding: 10px 13px 10px 13px;
 }
 
 .deaths,
@@ -36,4 +45,5 @@ th {
 .death_per_million {
   color: red;
   text-align: left;
+  padding: 10px 10px 10px 10px;
 }

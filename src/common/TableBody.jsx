@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./tablebody.css";
 import CountriesPopulate from "./countriespopulate";
 import SearchPopulate from "./searchpopulate";
 
