@@ -1,34 +1,31 @@
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
-import pkg from "../package.json";
-import webAppdata from "./utils/webappdata.json";
-import Header from "./components/Header";
-import Data from "./components/data";
-import Nav from "./components/nav";
-import Growth from "./components/growth";
 import "./App.css";
+
+import React, {Component} from "react";
+import {Route, Switch} from "react-router-dom";
+
+import pkg from "../package.json";
+
+import Data from "./components/data";
+import Growth from "./components/growth";
+import Header from "./components/Header";
+import Nav from "./components/nav";
+import webAppdata from "./utils/webappdata.json";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      country: "",
-      check: false
-    };
+    this.state = {country : "", check : false};
   }
 
-  onSearch = country => {
-    this.setState({ country });
-  };
+  onSearch = country => { this.setState({country}); };
 
-  afterSearch = () => {
-    this.setState({ check: true });
-  };
+  afterSearch = () => { this.setState({check : true}); };
 
   render() {
     return (
       <React.Fragment>
-        <Header title={pkg.appName} />
+        <Header title={
+      pkg.appName} />
         <Nav
           country={this.state.country}
           placeHolder={webAppdata.placeHolder}
@@ -37,14 +34,15 @@ class App extends Component {
         />
         <Switch>
           <Route
-            exact
-            path="/"
-            render={() => <Data check={this.state.check} apiData="" />}
-          />
+    exact
+    path = "/"
+    render = {
+      () => <Data check = {this.state.check} apiData = "" />
+    } />
           <Route
             exact
-            path="/search"
-            render={() => (
+            path="/search "
+    render = {() => (
               <Data check={this.state.check} apiData={this.state.country} />
             )}
           />
