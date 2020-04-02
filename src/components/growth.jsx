@@ -20,11 +20,9 @@ class Growth extends Component {
       `https://corona.lmao.ninja/v2/historical/all`
     );
 
-    const workedAPIDATA = apiInfo => {
+    const formattingAPIDATA = apiInfo => {
       let dateArr = Object.keys(apiData[apiInfo]);
       let arr = [{ ...this.state.graphID, ...this.state.graphColor, data: [] }];
-      let dataXANDY = [];
-
       for (let i = 0; i < dateArr.length; i++) {
         let axix = {
           x: dateArr[i],
@@ -37,9 +35,9 @@ class Growth extends Component {
     };
 
     this.setState({
-      worldWideCases: workedAPIDATA("cases"),
-      worldWideDeaths: workedAPIDATA("deaths"),
-      worldWideRecovered: workedAPIDATA("recovered")
+      worldWideCases: formattingAPIDATA("cases"),
+      worldWideDeaths: formattingAPIDATA("deaths"),
+      worldWideRecovered: formattingAPIDATA("recovered")
     });
   };
 
