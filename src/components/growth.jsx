@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import { ResponsiveLine, Line } from "@nivo/line";
 import axios from "axios";
-import "./growth.css";
+import GrowthChart from "../common/growthchart";
+import "./chartspace.css";
 
 class Growth extends Component {
   constructor(props) {
     super(props);
     this.state = {
       graphID: { id: "WorldWide" },
-      graphColor: { color: "hsl(209, 70%, 50%)" },
+      graphColor: { color: "hsl(355, 70%, 50%)" },
       worldWideCases: [],
       worldWideDeaths: [],
       worldWideRecovered: []
@@ -23,7 +23,7 @@ class Growth extends Component {
     const formattingAPIDATA = apiInfo => {
       let dateArr = Object.keys(apiData[apiInfo]);
       let arr = [{ ...this.state.graphID, ...this.state.graphColor, data: [] }];
-      for (let i = 0; i < dateArr.length; i++) {
+      for (let i = 0; i < dateArr.length; i += 7) {
         let axix = {
           x: dateArr[i],
           y: apiData[apiInfo][dateArr[i]]
@@ -43,7 +43,27 @@ class Growth extends Component {
 
   render() {
     const { worldWideCases, worldWideDeaths, worldWideRecovered } = this.state;
-    return <div className="worldwide"></div>;
+    return (
+      <React.Fragment>
+        <GrowthChart
+          data={worldWideCases}
+          title="🌐 Worldwide Cases"
+          color="category10"
+        />
+        <div className="space"></div>
+        <GrowthChart
+          data={worldWideDeaths}
+          title="☹️ Worldwide Deaths"
+          color="set1"
+        />
+        <div className="space"></div>
+        <GrowthChart
+          data={worldWideRecovered}
+          title="🚑 Worldwide Recovery"
+          color="dark2"
+        />
+      </React.Fragment>
+    );
   }
 }
 
