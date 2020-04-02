@@ -24,6 +24,10 @@
   padding: 30px 10px 70px 10px;
 }
 
+.growthContainer a {
+  text-decoration: none;
+}
+
 .nav button {
   color: #fad000;
   background-color: black;
