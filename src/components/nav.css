@@ -5,7 +5,6 @@
   margin-bottom: 10px;
 }
 
-
 .statsContainer {
   transform: rotate(90deg);
 }
@@ -47,13 +46,12 @@ button:hover {
   .statsContainer button {
     margin-top: 10px;
     border-radius: 10px;
-    padding: 10px 18px 70px 19px;
+    padding: 10px 18px 75px 19px;
   }
 
   .growthContainer button {
     margin-top: 10px;
-
     border-radius: 10px;
-    padding: 10px 10px 70px 10px;
+    padding: 10px 10px 75px 10px;
   }
 }

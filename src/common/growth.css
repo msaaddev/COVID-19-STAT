@@ -11,7 +11,7 @@
 .growth {
   display: flex;
   justify-content: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", sans-serif;
   color: #fad000;
   background-color: #202124;
   padding: 30px 0px;
@@ -22,11 +22,19 @@
     height: 500px;
     border: solid #fad000;
     background-color: aliceblue;
-    padding-bottom: 90px;
+    padding-bottom: 10px;
     border-radius: 10px;
     margin: 0px 10px 10px 10px;
     color: #fad000;
   }
-}
 
-/* background-color: #202124; */
+  .growth {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto Slab", sans-serif;
+    color: #fad000;
+    background-color: #202124;
+    padding: 30px 0px;
+    margin-bottom: 20px;
+  }
+}

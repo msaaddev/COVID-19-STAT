@@ -47,21 +47,22 @@ class Growth extends Component {
       <React.Fragment>
         <GrowthChart
           data={worldWideCases}
-          title="🌐 Worldwide Cases"
+          title="🌐 WORLDWIDE CASES"
           color="category10"
         />
         <div className="space"></div>
         <GrowthChart
           data={worldWideDeaths}
-          title="☹️ Worldwide Deaths"
+          title="☹️ WORLDWIDE DEATHS"
           color="set1"
         />
         <div className="space"></div>
         <GrowthChart
           data={worldWideRecovered}
-          title="🚑 Worldwide Recovery"
+          title="🚑 WORLDWIDE RECOVERY"
           color="dark2"
         />
+        <div className="space"></div>
       </React.Fragment>
     );
   }
