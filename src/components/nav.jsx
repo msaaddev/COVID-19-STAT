@@ -5,12 +5,47 @@ import "./search.css";
 import { Link } from "react-router-dom";
 
 class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      graphID: { id: "WorldWide" },
+      graphColor: { color: "hsl(355, 70%, 50%)" }
+    };
+  }
   searchCountry = async value => {
     try {
       const response = await axios.get(
         `https://corona.lmao.ninja/countries/${value}`
       );
-      this.props.onSearch(response.data);
+
+      const { data } = await axios.get(
+        `https://corona.lmao.ninja/v2/historical/${value}`
+      );
+      let id = { id: value };
+      this.setState({ graphID: id });
+
+      const formattingAPIDATA = (apiData, apiInfo) => {
+        let dateArr = Object.keys(apiData[apiInfo]);
+
+        let arr = [
+          { ...this.state.graphID, ...this.state.graphColor, data: [] }
+        ];
+        for (let i = 0; i < dateArr.length; i += 7) {
+          let axix = {
+            x: dateArr[i],
+            y: apiData[apiInfo][dateArr[i]]
+          };
+          arr[0].data.push(axix);
+        }
+        return arr;
+      };
+
+      this.props.onSearch(
+        response.data,
+        formattingAPIDATA(data.timeline, "cases"),
+        formattingAPIDATA(data.timeline, "deaths"),
+        formattingAPIDATA(data.timeline, "recovered")
+      );
       this.props.afterSearch();
     } catch (error) {
       console.log(error);
