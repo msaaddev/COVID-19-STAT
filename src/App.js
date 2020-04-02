@@ -3,8 +3,9 @@ import { Route, Switch } from "react-router-dom";
 import pkg from "../package.json";
 import webAppdata from "./utils/webappdata.json";
 import Header from "./components/Header";
-import Search from "./components/search";
 import Data from "./components/data";
+import Nav from "./components/nav";
+import Growth from "./components/growth";
 import "./App.css";
 
 class App extends Component {
@@ -28,34 +29,26 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header title={pkg.appName} />
-        <Search
+        <Nav
           country={this.state.country}
           placeHolder={webAppdata.placeHolder}
           onSearch={this.onSearch}
           afterSearch={this.afterSearch}
         />
-
         <Switch>
           <Route
             exact
             path="/"
-            render={() => (
-              <Data
-                check={this.state.check}
-                apiData=""
-              />
-            )}
+            render={() => <Data check={this.state.check} apiData="" />}
           />
           <Route
             exact
             path="/search"
             render={() => (
-              <Data
-                check={this.state.check}
-                apiData={this.state.country}
-              />
+              <Data check={this.state.check} apiData={this.state.country} />
             )}
           />
+          <Route exact path="/growth" component={Growth} />
         </Switch>
       </React.Fragment>
     );

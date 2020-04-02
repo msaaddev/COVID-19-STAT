@@ -8,21 +8,25 @@ th {
 .country,
 .active {
   color: #fad000;
+  text-align: left;
 }
 
 .cases,
 .recovered,
 .case_per_million {
   color: green;
+  text-align: left;
 }
 
 .cases_today,
 .critical {
   color: indianred;
+  text-align: left;
 }
 
 .deaths,
 .today_death,
 .death_per_million {
   color: red;
+  text-align: left;
 }

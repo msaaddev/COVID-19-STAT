@@ -1,0 +1,40 @@
+.worldwide {
+  height: 500px;
+  border: solid #fad000;
+  background-color: aliceblue;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  margin: 40px 30px 10px 30px;
+
+}
+
+.growth {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto Slab", sans-serif;
+  color: #fad000;
+  background-color: #202124;
+  padding: 30px 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .worldwide {
+    height: 500px;
+    border: solid #fad000;
+    background-color: aliceblue;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin: 0px 10px 10px 10px;
+    color: #fad000;
+  }
+
+  .growth {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto Slab", sans-serif;
+    color: #fad000;
+    background-color: #202124;
+    padding: 30px 0px;
+    margin-bottom: 20px;
+  }
+}
