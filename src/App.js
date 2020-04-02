@@ -5,6 +5,7 @@ import webAppdata from "./utils/webappdata.json";
 import Header from "./components/Header";
 import Data from "./components/data";
 import Nav from "./components/nav";
+import Growth from "./components/growth";
 import "./App.css";
 
 class App extends Component {
@@ -47,6 +48,7 @@ class App extends Component {
               <Data check={this.state.check} apiData={this.state.country} />
             )}
           />
+          <Route exact path="/growth" component={Growth} />
         </Switch>
       </React.Fragment>
     );
