@@ -11,6 +11,13 @@ th {
   text-align: left;
 }
 
+.active a {
+  color: #fad000;
+  padding-bottom: 15px;
+  text-decoration-color:  indianred;
+  text-decoration-thickness: 4px;
+}
+
 .cases,
 .recovered,
 .case_per_million {
