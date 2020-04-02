@@ -3,6 +3,10 @@ import webAppdata from "../utils/webappdata.json";
 import "./tablehead.css";
 
 const TableHeader = () => {
+  let check;
+  const location = window.location.pathname;
+  location === "/" ? (check = false) : (check = true);
+
   return (
     <thead>
       <tr>
@@ -17,6 +21,7 @@ const TableHeader = () => {
         <th className="critical">{webAppdata.Critical}</th>
         <th className="case_per_million">{webAppdata.Cases_Per_Million}</th>
         <th className="death_per_million">{webAppdata.Deaths_Per_Million}</th>
+        {check && <th className="active">{webAppdata.Growth}</th>}
       </tr>
     </thead>
   );

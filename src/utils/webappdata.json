@@ -9,5 +9,6 @@
   "Active": "Active",
   "Critical": "Critical",
   "Cases_Per_Million": "Case Per Million",
-  "Deaths_Per_Million": "Deaths Per Million"
+  "Deaths_Per_Million": "Deaths Per Million",
+  "Growth": "Growth"
 }

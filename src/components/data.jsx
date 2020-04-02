@@ -12,15 +12,13 @@ class Data extends Component {
     };
   }
   componentWillMount = async () => {
-    if (!this.props.check) {
-      try {
-        const response = await axios.get(`https://corona.lmao.ninja/countries`);
-        response.data.sort((a, b) => parseFloat(a.cases) - parseFloat(b.cases));
-        response.data.reverse();
-        this.setState({ apiData: response.data });
-      } catch (error) {
-        console.log(error);
-      }
+    try {
+      const response = await axios.get(`https://corona.lmao.ninja/countries`);
+      response.data.sort((a, b) => parseFloat(a.cases) - parseFloat(b.cases));
+      response.data.reverse();
+      this.setState({ apiData: response.data });
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -28,7 +26,7 @@ class Data extends Component {
     return (
       <div className="overflow">
         <table align="center">
-          <TableHeader />
+          <TableHeader check={this.props.check} />
           {this.props.apiData === "" ? (
             <TableBody data="" check="false" apiData={this.state.apiData} />
           ) : (
