@@ -3,10 +3,6 @@ import webAppdata from "../utils/webappdata.json";
 import "./tablehead.css";
 
 const TableHeader = () => {
-  let check;
-  const location = window.location.pathname;
-  location === "/" ? (check = false) : (check = true);
-
   return (
     <thead>
       <tr>
