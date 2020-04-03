@@ -16,11 +16,11 @@ A web application specifically designed to provide you with the latest COVID-19 
 
 ## 🎩 Screenshots
 
-![Homepage](https://i.imgur.com/5JR1rzM.png)
+![Homepage](https://i.imgur.com/cSYNoEA.png)
 
-![Search](https://i.imgur.com/KaO3Ivw.png)
+![Search](https://i.imgur.com/0givf2Z.png)
 
-![Growth](https://i.imgur.com/t2P6m9R.png)
+![Growth](https://i.imgur.com/dQ1RfJq.png)
 
 ## 🙌🏻 PROPS
 
