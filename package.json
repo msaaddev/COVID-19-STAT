@@ -1,6 +1,6 @@
 {
   "name": "covid-19-stats",
-  "appName": "COVID-19 STATS",
+  "appName": "COVID-19 STAT",
   "description": "A web app to keep track of COVID 19 around the world",
   "version": "0.1.0",
   "private": true,
