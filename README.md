@@ -22,6 +22,10 @@ A web application specifically designed to provide you with the latest COVID-19 
 
 ![Growth](https://i.imgur.com/t2P6m9R.png)
 
+## 🙌🏻 PROPS
+
+This project is greatly inspired from [Ahmad Awais](https://ahmadawais.com/) corona-cli which lets you see all this right inside your terminal. [Check it out now!](https://github.com/ahmadawais/corona-cli)
+
 ## 🔑 License
 
 - [MIT](https://github.com/msaaddev/COVID-19/blob/master/LICENSE)
