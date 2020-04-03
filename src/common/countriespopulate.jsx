@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import "./tablebody.css";
 
 class CountriesPopulate extends Component {
+
+  /*
+  * creating unique keys for mapping data
+  */
   createKey = (apiInfo, data) => {
     return apiInfo.indexOf(data);
   };

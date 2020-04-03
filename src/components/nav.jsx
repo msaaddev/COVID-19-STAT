@@ -23,8 +23,6 @@ class Nav extends Component {
       );
       let id = { id: value };
       this.setState({ graphID: id });
-      console.log(data.timeline);
-
       const formattingAPIDATA = (apiData, apiInfo) => {
         let dateArr = Object.keys(apiData[apiInfo]);
 

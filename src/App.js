@@ -21,9 +21,17 @@ class App extends Component {
     };
   }
 
+  /*
+  * Changing state in child
+  */
+
   onSearch = (country, countryCases, countryDeaths, countryRecovered) => {
     this.setState({ country, countryCases, countryDeaths, countryRecovered });
   };
+
+  /*
+  * Method called after search happens
+  */
 
   afterSearch = () => {
     this.setState({ check: true });
