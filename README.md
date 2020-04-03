@@ -12,7 +12,7 @@ A web application specifically designed to provide you with the latest COVID-19 
 - Country Stats
 - COVID-19 Growth (Cases, Deaths, Recovered)
 
-## 🎩Screenshots
+## 🎩 Screenshots
 
 ![Homepage](https://i.imgur.com/5JR1rzM.png)
 
