@@ -26,6 +26,15 @@ A web application specifically designed to provide you with the latest COVID-19 
 
 This project is greatly inspired from [Ahmad Awais](https://ahmadawais.com/) corona-cli which lets you see all this right inside your terminal. [Check it out now!](https://github.com/ahmadawais/corona-cli)
 
+The following folks did an amazing job in testing this application.
+
+- [Ehmad Saeed](https://github.com/justEhmadSaeed)
+- [Iqra Fatima](https://github.com/iqrafatimame)
+- [Krona Emmanuel](https://github.com/kronaemmanuel)
+- [Maham Batool](http://github.com/mahambatool)
+- [Zaeema Anwar](https://github.com/thezaeemaanwar)
+- [Bareerah Muslim](https://github.com/biyamuslim)
+
 ## 🔑 License
 
 - [MIT](https://github.com/msaaddev/COVID-19/blob/master/LICENSE)
