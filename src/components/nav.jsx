@@ -23,6 +23,7 @@ class Nav extends Component {
       );
       let id = { id: value };
       this.setState({ graphID: id });
+      console.log(data.timeline);
 
       const formattingAPIDATA = (apiData, apiInfo) => {
         let dateArr = Object.keys(apiData[apiInfo]);
@@ -30,10 +31,22 @@ class Nav extends Component {
         let arr = [
           { ...this.state.graphID, ...this.state.graphColor, data: [] }
         ];
-        for (let i = 0; i < dateArr.length; i += 7) {
+        let i;
+        for (i = 0; i < dateArr.length; i += 7) {
           let axix = {
             x: dateArr[i],
             y: apiData[apiInfo][dateArr[i]]
+          };
+
+          arr[0].data.push(axix);
+        }
+
+        i -= 7;
+
+        for (let j = i + 1; j < dateArr.length; j++) {
+          let axix = {
+            x: dateArr[j],
+            y: apiData[apiInfo][dateArr[j]]
           };
           arr[0].data.push(axix);
         }
