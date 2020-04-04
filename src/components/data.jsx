@@ -19,10 +19,20 @@ class Data extends Component {
       data.reverse();
 
       let obj = {};
-      for (let i = 0; i < data.length; i++) {
-        let temp = {
-          [data[i].country]: i + 1,
-        };
+      let i;
+      data[0].country === "World" ? (i = 1) : (i = 0);
+
+      for (i; i < data.length; i++) {
+        let temp;
+        if (data[0].country === "World")
+          temp = {
+            [data[i].country]: i,
+          };
+        else
+          temp = {
+            [data[i].country]: i + 1,
+          };
+
         obj = { ...obj, ...temp };
       }
       this.setState({ apiData: data, ranks: obj });

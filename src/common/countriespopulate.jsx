@@ -6,7 +6,6 @@ class CountriesPopulate extends Component {
    * creating unique keys for mapping data
    */
   createKey = (apiInfo, data) => {
-    console.log(apiInfo);
     if (apiInfo[0].country === "World") return apiInfo.indexOf(data);
     else return apiInfo.indexOf(data) + 1;
   };
