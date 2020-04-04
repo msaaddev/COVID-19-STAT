@@ -5,7 +5,6 @@ import "./tablebody.css";
 class SearchPopulate extends Component {
   getRank = (country) => {
     let keys = Object.keys(this.props.ranks);
-    console.log(keys);
 
     for (let i = 0; i < keys.length; i++) {
       if (country === keys[i]) {

@@ -6,7 +6,7 @@ class CountriesPopulate extends Component {
    * creating unique keys for mapping data
    */
   createKey = (apiInfo, data) => {
-    return apiInfo.indexOf(data);
+    return apiInfo.indexOf(data) + 1;
   };
   render() {
     const { apiInfo } = this.props;

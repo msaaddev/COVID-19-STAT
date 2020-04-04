@@ -19,9 +19,9 @@ class Data extends Component {
       data.reverse();
 
       let obj = {};
-      for (let i = 1; i < data.length; i++) {
+      for (let i = 0; i < data.length; i++) {
         let temp = {
-          [data[i].country]: i,
+          [data[i].country]: i + 1,
         };
         obj = { ...obj, ...temp };
       }
