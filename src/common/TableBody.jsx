@@ -4,9 +4,9 @@ import SearchPopulate from "./searchpopulate";
 
 class TableBody extends Component {
   render() {
-    const { data, apiData, check } = this.props;
+    const { data, apiData, check, ranks } = this.props;
     return check === "true" ? (
-      <SearchPopulate data={data} />
+      <SearchPopulate data={data} ranks={ranks} />
     ) : (
       <CountriesPopulate apiInfo={apiData} />
     );

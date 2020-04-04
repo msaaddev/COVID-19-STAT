@@ -9,6 +9,7 @@ class Data extends Component {
     super(props);
     this.state = {
       apiData: [],
+      ranks: {},
     };
   }
   componentWillMount = async () => {
@@ -16,7 +17,15 @@ class Data extends Component {
       const { data } = await axios.get(`https://corona.lmao.ninja/countries`);
       data.sort((a, b) => parseFloat(a.cases) - parseFloat(b.cases));
       data.reverse();
-      this.setState({ apiData: data });
+
+      let obj = {};
+      for (let i = 1; i < data.length; i++) {
+        let temp = {
+          [data[i].country]: i,
+        };
+        obj = { ...obj, ...temp };
+      }
+      this.setState({ apiData: data, ranks: obj });
     } catch (error) {
       console.log(error);
     }
@@ -24,15 +33,20 @@ class Data extends Component {
 
   render() {
     const { check, apiData } = this.props;
-    const { apiData: stateData } = this.state;
+    const { apiData: stateData, ranks } = this.state;
     return (
       <div className="overflow">
         <table align="center">
           <TableHeader check={check} />
           {apiData === "" ? (
-            <TableBody data="" check="false" apiData={stateData} />
+            <TableBody
+              data=""
+              check="false"
+              ranks={ranks}
+              apiData={stateData}
+            />
           ) : (
-            <TableBody check="true" data={apiData} />
+            <TableBody check="true" ranks={ranks} data={apiData} />
           )}
         </table>
       </div>

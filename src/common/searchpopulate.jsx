@@ -3,13 +3,23 @@ import { Link } from "react-router-dom";
 import "./tablebody.css";
 
 class SearchPopulate extends Component {
+  getRank = (country) => {
+    let keys = Object.keys(this.props.ranks);
+    console.log(keys);
+
+    for (let i = 0; i < keys.length; i++) {
+      if (country === keys[i]) {
+        return i + 1;
+      }
+    }
+  };
   render() {
     const { data } = this.props;
     return (
       <React.Fragment>
         <tbody>
           <tr key="1">
-            <td className="country">1</td>
+            <td className="country">{this.getRank(data.country)}</td>
             <td className="country">{data.country}</td>
             <td className="cases">{data.cases}</td>
             <td className="cases_today">{data.todayCases}</td>
