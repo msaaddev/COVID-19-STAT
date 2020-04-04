@@ -92,11 +92,8 @@ class Nav extends Component {
               type="text"
               placeholder={placeHolder}
               onChange={(e) => {
-                if (e.target.value !== "") {
-                  this.searchCountry(e.target.value);
-                } else {
-                  this.clearSearch();
-                }
+                if (e.target.value !== "") this.searchCountry(e.target.value);
+                else this.clearSearch();
               }}
             />
           </Link>
