@@ -6,7 +6,7 @@ const TableHeader = () => {
   return (
     <thead>
       <tr>
-        <th className="country">No.</th>
+        <th className="country">{webAppdata.Rank}</th>
         <th className="country">{webAppdata.Country}</th>
         <th className="cases">{webAppdata.Cases}</th>
         <th className="cases_today">{webAppdata.Cases_Today}</th>
