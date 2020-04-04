@@ -65,6 +65,16 @@ class Nav extends Component {
     }
   };
 
+  /*
+    Rendering all countries when search box is empty
+  */
+
+  clearSearch = () => {
+    const { onSearch } = this.props;
+    let obj = "";
+    onSearch(obj);
+  };
+
   render() {
     const { placeHolder } = this.props;
 
@@ -81,7 +91,13 @@ class Nav extends Component {
               id="search"
               type="text"
               placeholder={placeHolder}
-              onChange={(e) => this.searchCountry(e.target.value)}
+              onChange={(e) => {
+                if (e.target.value !== "") {
+                  this.searchCountry(e.target.value);
+                } else {
+                  this.clearSearch();
+                }
+              }}
             />
           </Link>
         </div>
