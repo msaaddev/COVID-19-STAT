@@ -15,9 +15,7 @@ class CountriesPopulate extends Component {
         {apiInfo.map((data) => {
           return (
             <tr key={this.createKey(apiInfo, data)}>
-              <td className="country">
-                {this.createKey(apiInfo, data) + 1}
-              </td>
+              <td className="country">{this.createKey(apiInfo, data) + 1}</td>
               <td className="country">{data.country}</td>
               <td className="cases">{data.cases}</td>
               <td className="cases_today">{data.todayCases}</td>

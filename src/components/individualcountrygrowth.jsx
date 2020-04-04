@@ -3,7 +3,6 @@ import GrowthChart from "../common/growthchart";
 import "./chartspace.css";
 
 class IndividualGrowth extends Component {
-
   render() {
     const { cases, deaths, recovered, name } = this.props;
 

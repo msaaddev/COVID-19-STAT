@@ -17,7 +17,7 @@ const GrowthChart = ({ data, title, color }) => {
             min: "auto",
             max: "auto",
             stacked: true,
-            reverse: false
+            reverse: false,
           }}
           axisTop={null}
           axisRight={null}
@@ -26,13 +26,13 @@ const GrowthChart = ({ data, title, color }) => {
             tickSize: 5,
             tickPadding: 5,
             tickColor: "white",
-            tickRotation: 70
+            tickRotation: 70,
           }}
           axisLeft={{
             orient: "left",
             tickSize: 0,
             tickPadding: 5,
-            tickRotation: 45
+            tickRotation: 45,
           }}
           enableGridX={false}
           colors={{ scheme: `${color}` }}
