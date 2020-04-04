@@ -2,21 +2,21 @@ import React, { Component } from "react";
 import "./tablebody.css";
 
 class CountriesPopulate extends Component {
-
   /*
-  * creating unique keys for mapping data
-  */
+   * creating unique keys for mapping data
+   */
   createKey = (apiInfo, data) => {
     return apiInfo.indexOf(data);
   };
   render() {
+    const { apiInfo } = this.props;
     return (
       <tbody>
-        {this.props.apiInfo.map(data => {
+        {apiInfo.map((data) => {
           return (
-            <tr key={this.createKey(this.props.apiInfo, data)}>
+            <tr key={this.createKey(apiInfo, data)}>
               <td className="country">
-                {this.createKey(this.props.apiInfo, data) + 1}
+                {this.createKey(apiInfo, data) + 1}
               </td>
               <td className="country">{data.country}</td>
               <td className="cases">{data.cases}</td>

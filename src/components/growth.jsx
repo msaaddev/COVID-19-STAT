@@ -11,7 +11,7 @@ class Growth extends Component {
       graphColor: { color: "hsl(355, 70%, 50%)" },
       worldWideCases: [],
       worldWideDeaths: [],
-      worldWideRecovered: []
+      worldWideRecovered: [],
     };
   }
 
@@ -20,14 +20,16 @@ class Growth extends Component {
       `https://corona.lmao.ninja/v2/historical/all`
     );
 
-    const formattingAPIDATA = apiInfo => {
+    const { graphID, graphColor } = this.state;
+
+    const formattingAPIDATA = (apiInfo) => {
       let dateArr = Object.keys(apiData[apiInfo]);
-      let arr = [{ ...this.state.graphID, ...this.state.graphColor, data: [] }];
+      let arr = [{ ...graphID, ...graphColor, data: [] }];
       let i;
       for (i = 0; i < dateArr.length; i += 7) {
         let axix = {
           x: dateArr[i],
-          y: apiData[apiInfo][dateArr[i]]
+          y: apiData[apiInfo][dateArr[i]],
         };
         arr[0].data.push(axix);
       }
@@ -35,7 +37,7 @@ class Growth extends Component {
       for (let j = i + 1; j < dateArr.length; j++) {
         let axix = {
           x: dateArr[j],
-          y: apiData[apiInfo][dateArr[j]]
+          y: apiData[apiInfo][dateArr[j]],
         };
         arr[0].data.push(axix);
       }
@@ -46,7 +48,7 @@ class Growth extends Component {
     this.setState({
       worldWideCases: formattingAPIDATA("cases"),
       worldWideDeaths: formattingAPIDATA("deaths"),
-      worldWideRecovered: formattingAPIDATA("recovered")
+      worldWideRecovered: formattingAPIDATA("recovered"),
     });
   };
 

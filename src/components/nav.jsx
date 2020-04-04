@@ -9,12 +9,12 @@ class Nav extends Component {
     super(props);
     this.state = {
       graphID: { id: "WorldWide" },
-      graphColor: { color: "hsl(355, 70%, 50%)" }
+      graphColor: { color: "hsl(355, 70%, 50%)" },
     };
   }
-  searchCountry = async value => {
+  searchCountry = async (value) => {
     try {
-      const response = await axios.get(
+      const { data: searchResponseData } = await axios.get(
         `https://corona.lmao.ninja/countries/${value}`
       );
 
@@ -23,17 +23,19 @@ class Nav extends Component {
       );
       let id = { id: value };
       this.setState({ graphID: id });
+
+      const { graphID, graphColor } = this.state;
+      const { onSearch, afterSearch } = this.props;
+
       const formattingAPIDATA = (apiData, apiInfo) => {
         let dateArr = Object.keys(apiData[apiInfo]);
 
-        let arr = [
-          { ...this.state.graphID, ...this.state.graphColor, data: [] }
-        ];
+        let arr = [{ ...graphID, ...graphColor, data: [] }];
         let i;
         for (i = 0; i < dateArr.length; i += 7) {
           let axix = {
             x: dateArr[i],
-            y: apiData[apiInfo][dateArr[i]]
+            y: apiData[apiInfo][dateArr[i]],
           };
 
           arr[0].data.push(axix);
@@ -44,20 +46,20 @@ class Nav extends Component {
         for (let j = i + 1; j < dateArr.length; j++) {
           let axix = {
             x: dateArr[j],
-            y: apiData[apiInfo][dateArr[j]]
+            y: apiData[apiInfo][dateArr[j]],
           };
           arr[0].data.push(axix);
         }
         return arr;
       };
 
-      this.props.onSearch(
-        response.data,
+      onSearch(
+        searchResponseData,
         formattingAPIDATA(data.timeline, "cases"),
         formattingAPIDATA(data.timeline, "deaths"),
         formattingAPIDATA(data.timeline, "recovered")
       );
-      this.props.afterSearch();
+      afterSearch();
     } catch (error) {
       console.log(error);
     }
@@ -79,7 +81,7 @@ class Nav extends Component {
               id="search"
               type="text"
               placeholder={placeHolder}
-              onChange={e => this.searchCountry(e.target.value)}
+              onChange={(e) => this.searchCountry(e.target.value)}
             />
           </Link>
         </div>

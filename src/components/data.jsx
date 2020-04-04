@@ -8,29 +8,31 @@ class Data extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      apiData: []
+      apiData: [],
     };
   }
   componentWillMount = async () => {
     try {
-      const response = await axios.get(`https://corona.lmao.ninja/countries`);
-      response.data.sort((a, b) => parseFloat(a.cases) - parseFloat(b.cases));
-      response.data.reverse();
-      this.setState({ apiData: response.data });
+      const { data } = await axios.get(`https://corona.lmao.ninja/countries`);
+      data.sort((a, b) => parseFloat(a.cases) - parseFloat(b.cases));
+      data.reverse();
+      this.setState({ apiData: data });
     } catch (error) {
       console.log(error);
     }
   };
 
   render() {
+    const { check, apiData } = this.props;
+    const { apiData: stateData } = this.state;
     return (
       <div className="overflow">
         <table align="center">
-          <TableHeader check={this.props.check} />
-          {this.props.apiData === "" ? (
-            <TableBody data="" check="false" apiData={this.state.apiData} />
+          <TableHeader check={check} />
+          {apiData === "" ? (
+            <TableBody data="" check="false" apiData={stateData} />
           ) : (
-            <TableBody check="true" data={this.props.apiData} />
+            <TableBody check="true" data={apiData} />
           )}
         </table>
       </div>
