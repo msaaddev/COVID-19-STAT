@@ -14,7 +14,7 @@ class Data extends Component {
   }
   componentWillMount = async () => {
     try {
-      const { data } = await axios.get(`https://corona.lmao.ninja/countries`);
+      const { data } = await axios.get(`https://corona.lmao.ninja/v2/countries`);
       data.sort((a, b) => parseFloat(a.cases) - parseFloat(b.cases));
       data.reverse();
 

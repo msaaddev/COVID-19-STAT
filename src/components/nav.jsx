@@ -15,7 +15,7 @@ class Nav extends Component {
   searchCountry = async (value) => {
     try {
       const { data: searchResponseData } = await axios.get(
-        `https://corona.lmao.ninja/countries/${value}`
+        `https://corona.lmao.ninja/v2/countries/${value}`
       );
 
       const { data } = await axios.get(
